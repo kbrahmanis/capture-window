@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Screenshot App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Window Screenshot Capture</h1>
+            <p>Select a display/window and capture screenshots with one click</p>
+        </header>
+
+        <div class="controls">
+            <div class="section">
+                <h3>Step 1: Select Display/Window</h3>
+                <button id="refreshBtn" class="btn secondary">Refresh Windows List</button>
+                <select id="windowSelect" class="window-select">
+                    <option value="">Loading windows...</option>
+                </select>
+            </div>
+
+            <div class="section">
+                <h3>Step 2: Set Save Location</h3>
+                <button id="pathBtn" class="btn secondary">Choose Folder</button>
+                <p id="pathDisplay" class="path-display">Default: Downloads Folder</p>
+            </div>
+
+            <div class="section">
+                <h3>Step 3: Capture Screenshot</h3>
+                <button id="captureBtn" class="btn primary" disabled>
+                    📷 Capture Screenshot
+                </button>
+            </div>
+        </div>
+
+        <div class="status" id="status">
+            Ready to capture screenshots
+        </div>
+
+        <div class="info">
+            <h4>Instructions:</h4>
+            <ul>
+                <li>Click "Refresh Windows List" to see available displays and windows.</li>
+                <li>(Optional) Choose a custom folder to save screenshots in.</li>
+                <li>Select the window/display you want to capture from the dropdown.</li>
+                <li>Click "Capture Screenshot" to take a screenshot.</li>
+            </ul>
+        </div>
+
+        <div class="recent-captures" id="recentCaptures" style="display: none;">
+            <h4>Recent Captures:</h4>
+            <div id="capturesList"></div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "name": "window-screenshot-app",
+  "version": "1.0.0",
+  "description": "Desktop app to capture screenshots of selected windows",
+  "main": "main.js",
+  "author": "Immineal",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder --publish=never"
+  },
+  "build": {
+    "appId": "com.yourcompany.window-screenshot-app",
+    "productName": "Window Screenshot App",
+    "icon": "icon.ico",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "renderer.js",
+      "index.html",
+      "style.css",
+      "preload.js",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "node-window-manager": "^2.2.4",
+    "screenshot-desktop": "^1.15.0",
+    "sharp": "^0.34.3"
+  }
+}
