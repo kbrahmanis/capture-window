@@ -1,7 +1,7 @@
 {
   "name": "window-screenshot-app",
   "version": "1.0.0",
-  "description": "Desktop app to capture screenshots of selected windows",
+  "description": "A Windows desktop app (Win 10+) to capture screenshots of selected windows or entire displays.",
   "main": "main.js",
   "author": "Immineal",
   "scripts": {
